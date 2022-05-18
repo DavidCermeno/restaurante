@@ -13,9 +13,9 @@ class PlatilloController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(/*Request $request*/)
     {
-        $texto=($request->get('texto'));
+        //$texto=($request->get('texto'));
         $datos['platillos'] = Platillo::paginate(2);
         return view('platillo.index', $datos);
     }
